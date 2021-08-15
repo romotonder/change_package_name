@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<network-security-config>
+
+  <domain-config cleartextTrafficPermitted="true">
+    &lt;!&ndash;<domain includeSubdomains="true">localhost</domain>&ndash;&gt;
+    <domain includeSubdomains="true">https://www.romo-tonder.dk</domain>
+    <domain includeSubdomains="true">localhost</domain>
+    <domain includeSubdomains="true">http://www.omdbapi.com</domain>
+    <domain includeSubdomains="true">http://www.yourdomain.in</domain>
+    <domain includeSubdomains="true">http://serveripaddress</domain>
+  </domain-config>
+  <base-config cleartextTrafficPermitted="true"/>
+</network-security-config>-->
+<network-security-config>
+<base-config cleartextTrafficPermitted="true">
+  <trust-anchors>
+    <certificates src="system" />
+  </trust-anchors>
+</base-config>
+
+<domain-config cleartextTrafficPermitted="true">
+  <domain includeSubdomains="true">localhost</domain>
+  <domain includeSubdomains="true">www.romotonder.dk</domain>
+</domain-config> </network-security-config>
+

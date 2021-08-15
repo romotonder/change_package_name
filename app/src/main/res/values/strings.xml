@@ -1,0 +1,167 @@
+<resources>
+    <string name="app_name">Visit Romo Tonder</string>
+
+    <!--<string name="clientId" translatable="false">415158262655-ucudoo8thvum41k2376tg5ek5ipeujg4.apps.googleusercontent.com</string>-->
+    <!--<string name="clientId" translatable="false">165202113600-u21qvg6qcgjh8uh6jakkctqlqkhoi1le.apps.googleusercontent.com</string>-->
+
+<!--    Added Anil com.romo.tonder.visits  For Gooogle login key ID-->
+<!--    <string name="clientId" translatable="false">415158262655-ev1eldoml0tjualjd9qakfrh07e6g07f.apps.googleusercontent.com</string>-->
+<!--    <string name="clientId" translatable="false">415158262655-ud046i1an1dij0mqh1fqcv9pn2kgbcub.apps.googleusercontent.com</string>-->
+    <string name="clientId" translatable="false">415158262655-m6gn32vk631iigm0shlf7pug6nc7srum.apps.googleusercontent.com</string>
+
+
+<!--    {"installed":{"client_id":"415158262655-ev1eldoml0tjualjd9qakfrh07e6g07f.apps.googleusercontent.com","project_id":"romo-tonder-1563873199277","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","redirect_uris":["urn:ietf:wg:oauth:2.0:oob","http://localhost"]}}-->
+
+<!--    {"installed":{"client_id":"415158262655-k04pe4982mav9a8ebfpummoo6cbbd32e.apps.googleusercontent.com",
+"project_id":"romo-tonder-1563873199277","auth_uri":"https://accounts.google.com/o/oauth2/auth",
+"token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
+"redirect_uris":["urn:ietf:wg:oauth:2.0:oob","http://localhost"]}}-->
+
+
+   <!-- <string name="clientId" translatable="false">165202113600-h4sht3td1fddvpnnkvrign13ljhgfbg1.apps.googleusercontent.com"</string>-->
+
+
+<!--    For FB login App ID -->
+    <string name="facebook_app_id" translatable="false">2421095324853404</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb2421095324853404</string>
+
+    <string name="geo_aapi_key" translatable="false">AIzaSyBXQcyGb3W31malhHTXHq4h8VEVpN_YdVA</string>
+    <string name="places_API_KEY" translatable="false">AIzaSyBXQcyGb3W31malhHTXHq4h8VEVpN_YdVA</string>
+
+
+
+    <string name="agree_trams_conditions">Agree to our Terms and Conditions</string>
+    <string name="agree_privacy_policy">Agree to our Privacy Policy</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="log_in">Login</string>
+    <string name="registration_page_title">Registration</string>
+    <string name="email_id">Email</string>
+    <string name="select_privecy_policy">Please select privacy policy</string>
+    <string name="select_trams_and_condition">Please select  terms and condition</string>
+    <string name="msg_enter_password">Please enter passsword</string>
+    <string name="msg_valid_email">Please valid email</string>
+    <string name="msg_email">Please enter email</string>
+    <string name="msg_username">Please enter your username</string>
+    <string name="location_service_enable">If Your Location Service is not enable near me functionality will not work.</string>
+    <string name="registration_setup_title_start_our_simple">Let\'s start our simple</string>
+    <string name="where_you_going_hint">Please enter where are you going?</string>
+    <string name="txt_where_are_u_going">Where are you going?</string>
+    <string name="arrival_time_hint">Please select time of arrival</string>
+    <string name="txt_arrival_time">Time of your arrival?</string>
+    <string name="next">Next</string>
+    <string name="language">Language</string>
+    <string name="select_lang">Select Language</string>
+    <string name="english_lang">English</string>
+    <string name="danish_lang">Danish</string>
+    <string name="german_lang">German</string>
+    <string-array name="language_choice">
+        <item>@string/danish_lang</item>
+        <item>@string/english_lang</item>
+        <item>@string/german_lang</item>
+    </string-array>
+    <string-array name="wheretogo_choice">
+        <item>@string/romo</item>
+        <item>@string/tonder</item>
+        <item>@string/guest</item>
+    </string-array>
+    <string name="registration_setup_whats_is_your_interest">What is your interest</string>
+    <string name="txt_active_experience">Active experiences</string>
+    <string name="txt_nature_exp">Nature experiences</string>
+    <string name="txt_cultural_experiences">Cultural experiences</string>
+    <string name="txt_gastro_exp">Gastro experiences</string>
+    <string name="txt_shopping">Shopping</string>
+    <string name="exit">Exit</string>
+    <string name="select_lang_hint">Please select language</string>
+    <string name="title_what_is_ur_interest_page">Set your favorite below to allow the app to earn the best content</string>
+    <string name="network_failure">Network Failure</string>
+    <string name="login_app_body">The official app for your holiday in the \nRomo-tonder area</string>
+    <string name="login_app_title" translatable="false">Visit Romo Tonder</string>
+    <string name="login_from_google">Login with Google</string>
+    <string name="login_facebook">Login with Facebook</string>
+    <!--    <string name="facebook_app_id" translatable="false">2421095324853404</string>-->
+    <!--    <string name="fb_login_protocol_scheme" translatable="false">fb2421095324853404</string>-->
+
+
+
+
+    <string name="welcome_screen_body">Let\'s start by setting up your account</string>
+    <string name="let_go">Let\'s Go</string>
+    <string name="bottom_home">Home</string>
+    <string name="bottom_events">Events</string>
+    <string name="bottom_listing">Listing</string>
+    <string name="bottom_account">Account</string>
+    <string name="welcome_title">HELLO &amp; \n WELCOME</string>
+    <string name="romo" translatable="false">Romo</string>
+    <string name="tonder" translatable="false">Tonder</string>
+    <string name="guest" translatable="false">Guest</string>
+    <string name="wher_to_go">Where To Go</string>
+    <!--<string name="server_client_id" translatable="false">877992610069-qlkludosaqfofiuumo9d082fanito7pt.apps.googleusercontent.com</string>-->
+   <!-- <string name="server_client_id" translatable="false">877992610069-qlkludosaqfofiuumo9d082fanito7pt.apps.googleusercontent.com</string>-->
+    <string name="logout_dialog_message">Do you want to logout?</string>
+    <string name="logout_dialog_title" translatable="false">Logout?</string>
+    <string name="delete_dialog_message">Do you want to Delete your account?</string>
+    <string name="delete_dialog_title" translatable="false">Remove my account?</string>
+    <string name="delete_success_dialog_title" translatable="false">Account Deleted</string>
+    <string name="delete_success_dialog_message" translatable="false">Account deleted successfully.Return to main screen</string>
+    <string name="forget_password">Forgot your password?</string>
+    <string name="btn_back">Back</string>
+    <string name="like" translatable="false">" Likes"</string>
+    <string name="comments" translatable="false">" Comments"</string>
+    <string name="google_map_key" translatable="false">AIzaSyCz92VWuyat7PMF0Bg0aZYMsONrWlQo3IM</string>
+    <string name="listing_details_timing">OPENING HOUR</string>
+    <string name="closed">Closed</string>
+    <string name="open">Open</string>
+    <string name="open24">Open 24/7</string>
+    <string name="every">Every</string>
+    <string name="opening_at">Openning at</string>
+    <string name="closed_at">Closed at</string>
+    <string name="address">Address</string>
+    <string name="follow_and_contact">FOLLOW &amp; CONTACT</string>
+    <string name="Area_of_Interest">AREA OF INTEREST</string>
+    <string name="basic_info">BASIC INFO</string>
+    <string name="Phone">Phone</string>
+    <string name="review">Review</string>
+    <string name="loading">Loading...</string>
+    <string name="save">SAVE</string>
+    <string name="view_all">VIEW ALL</string>
+    <string name="search">Search</string>
+    <string name="search_by_category">Search by category</string>
+    <string name="search_by_place">Search by place</string>
+    <string name="search_now">Search Now</string>
+    <string name="location_off_message">If Your Location Service is not enable near me functionality will not work.</string>
+    <string name="cancel">Cancel</string>
+    <string name="near_me">Near me</string>
+    <string name="within_25_km">within 25 km</string>
+    <string name="review_title">Review Title*</string>
+    <string name="your_review">Your Review *</string>
+    <string name="submit">Submit</string>
+    <string name="profile">Profile</string>
+    <string name="message">Message</string>
+    <string name="notification">Notification</string>
+    <string name="favorites">Favorites</string>
+    <string name="settings">Settings</string>
+    <string name="logout">Logout</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="ok">Ok</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="delete">Delete</string>
+    <string name="profile_update_success">Profile is updated successfully</string>
+    <string name="notification_settings">Notification Settings</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="call_us">Call Us</string>
+    <string name="share">Share</string>
+    <string name="update">Update</string>
+    <string name="show_more">Show more</string>
+    <string name="favourit">Favourite</string>
+    <string name="shares">Share</string>
+    <string name="messages">Message</string>
+    <string name="call_uss">Call Us</string>
+    <string name="your_promo_code">Your Promo code</string>
+
+
+</resources>

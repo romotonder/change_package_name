@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/update_area"
+        style="@style/DetailsPageHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/update"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/DodgerBlue"/>
+    <View
+        style="@style/Divider"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/delete_area"
+        style="@style/DetailsPageHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        android:layout_gravity="center"
+        android:textColor="@color/DodgerBlue"/>
+    <View
+        style="@style/Divider"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/cancel_area"
+        style="@style/DetailsPageHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        android:layout_gravity="center"
+        android:textColor="@color/DodgerBlue"/>
+    <View
+        style="@style/Divider"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"/>
+
+</LinearLayout>

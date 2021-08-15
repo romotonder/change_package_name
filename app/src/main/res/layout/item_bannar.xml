@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/bannar_img"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/testimage"
+            android:tint="#680B0B0C"/>
+
+        <TextView
+            android:id="@+id/bannar_heading"
+            style="@style/SubTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Heading Heading Heading Heading Heading Heading"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/bannar_descrip"
+            style="@style/SubTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Heading Heading Heading Heading Heading Heading Heading Heading Heading Heading Heading Heading Heading Heading Heading Heading Heading Heading"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

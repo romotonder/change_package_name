@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="220dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ChildImg"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/app_placeholder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/center"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintBottom_toBottomOf="@id/ChildImg"
+            app:layout_constraintTop_toTopOf="@id/ChildImg" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardBackgroundColor="@color/White"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="@+id/root_parent"
+            app:layout_constraintEnd_toEndOf="@id/root_parent"
+            app:layout_constraintStart_toStartOf="@id/root_parent"
+            app:layout_constraintTop_toBottomOf="@id/center">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/root_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/logo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/shape_circle_background_transparent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/app_placeholder"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@id/title"
+                    style="@style/CardTextTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Cafe Midpoint"
+                    app:layout_constraintStart_toStartOf="@id/logo"
+                    app:layout_constraintTop_toBottomOf="@id/logo" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CardTextSubtitle"
+                    android:id="@+id/tagLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:paddingEnd="16dp"
+
+                    android:text="Cafe MidpointCafe Midpoint Cafe MidpointCafe Midpoint Cafe MidpointCafe Midpoint"
+                    app:layout_constraintStart_toStartOf="@id/title"
+                    app:layout_constraintTop_toBottomOf="@id/title" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/locationImg"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/ic_outline_location_on_24"
+                    android:tint="@color/red_main_theme"
+                    app:layout_constraintStart_toStartOf="@id/title"
+                    app:layout_constraintTop_toBottomOf="@+id/tagLine" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CardTextSubtitle"
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Cafe MidpointCafe Midpoint"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@+id/locationImg"
+                    app:layout_constraintTop_toBottomOf="@id/tagLine" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

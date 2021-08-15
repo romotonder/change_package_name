@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White">
+
+    <LinearLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/red_main_theme"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <ImageView
+            android:id="@+id/go_back_image_view"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_chevron_left_24" />
+
+        <TextView
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:gravity="center"
+            android:text="@string/search"
+            android:textColor="@color/White"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5sp"
+                android:src="@drawable/ic_round_location_searching_24" />
+
+            <ImageView
+                android:id="@+id/location_checked_image_view"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="7sp"
+                android:elevation="1sp"
+                android:src="@drawable/ic_checklist" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/info_layout"
+        android:layout_below="@id/action_bar"
+        android:paddingTop="10sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/search_title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:layout_margin="5sp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/search_title_edit_text"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".8"
+                    android:background="@null"
+                    android:gravity="center|start"
+                    android:hint="@string/search"
+                    android:paddingStart="10sp"
+                    android:textColor="@color/title_text_color"
+                    android:textColorHint="@color/subtitle_text_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".2"
+                    android:padding="5sp"
+                    android:src="@drawable/ic_outline_search_24"
+                    android:tint="@color/subtitle_text_color" />
+            </LinearLayout>
+
+            <View
+                android:background="@color/subtitle_text_color"
+                android:layout_width="match_parent"
+                android:layout_height="1sp"/>
+
+            <LinearLayout
+                android:id="@+id/category_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:layout_margin="5sp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/category_text_view"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".8"
+                    android:background="@null"
+                    android:gravity="center|start"
+                    android:paddingStart="10sp"
+                    android:text="@string/search_by_category"
+                    android:textColor="@color/subtitle_text_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".2"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    android:tint="@color/subtitle_text_color" />
+            </LinearLayout>
+            <View
+                android:background="@color/subtitle_text_color"
+                android:layout_width="match_parent"
+                android:layout_height="1sp"/>
+            <LinearLayout
+                android:id="@+id/region_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:layout_margin="5sp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/region_text_view"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".8"
+                    android:background="@null"
+                    android:gravity="center|start"
+                    android:paddingStart="10sp"
+                    android:text="@string/search_by_place"
+                    android:textColor="@color/subtitle_text_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".2"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    android:tint="@color/subtitle_text_color" />
+            </LinearLayout>
+            <View
+                android:background="@color/subtitle_text_color"
+                android:layout_width="match_parent"
+                android:layout_height="1sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30sp"
+                android:layout_margin="5sp"
+                android:padding="5sp"
+                android:text="@string/near_me"
+                android:textSize="16sp" />
+
+            <SeekBar
+                android:id="@+id/distance_seek_bar"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_margin="5sp"
+                android:padding="5sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30sp"
+                android:layout_margin="5sp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".2"
+                    android:gravity="start|center"
+                    android:paddingStart="10sp"
+                    android:text="0 km"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/active_distance_text_view"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".6"
+                    android:gravity="center"
+                    android:text="@string/within_25_km"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".2"
+                    android:gravity="end|center"
+                    android:paddingEnd="10sp"
+                    android:text="50 km"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            <View
+                android:background="@color/subtitle_text_color"
+                android:layout_width="match_parent"
+                android:layout_height="1sp"/>
+            <LinearLayout
+                android:id="@+id/search_type_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:layout_marginTop="20sp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/search_type_text_view"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".8"
+                    android:background="@null"
+                    android:gravity="center|start"
+                    android:paddingStart="10sp"
+                    android:text="Type"
+                    android:textColor="@color/subtitle_text_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".2"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    android:tint="@color/subtitle_text_color" />
+            </LinearLayout>
+            <View
+                android:background="@color/subtitle_text_color"
+                android:layout_width="match_parent"
+                android:layout_height="1sp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/search_now_layout"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:text="@string/location_off_message"
+        android:textColor="@color/subtitle_text_color"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/search_now_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/red_main_theme">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/search_now"
+            android:textColor="@color/White"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

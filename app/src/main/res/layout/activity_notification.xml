@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WhiteSmoke"
+    tools:context=".activities.NotificationActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/red_main_theme">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/toolbar_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/notification"
+            android:textColor="@color/White"
+            android:textSize="20sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/child_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+
+                android:id="@+id/notification_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                android:layout_below="@id/toolbar"
+                android:background="@color/DarkRed"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@color/White"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/notification_title"
+                    style="@style/SubTitleTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:textStyle="bold"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:textSize="18sp"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/notification_description"
+                    style="@style/SubTitleTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:ellipsize="end"
+                    android:maxLines="5"
+                    android:paddingTop="0dp"
+                    android:text="Description" />
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:background="@color/White"
+                android:padding="8dp"
+                />
+            <LinearLayout
+                android:id="@+id/linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/link_button"
+                android:layout_below="@+id/child_linearlayout"
+                android:layout_margin="8dp"
+                android:background="@color/White"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/SubTitleTextView"
+                    android:layout_gravity="center"
+                    android:text="@string/your_promo_code"
+                    android:textAllCaps="true"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/promo_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_margin="10sp"
+                    android:background="@drawable/coupon_background_shape"
+                    android:padding="10sp"
+                    android:text=""
+                    android:textColor="@color/red_main_theme"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/copy_promo_image_view"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:padding="3sp"
+                    android:src="@drawable/ic_outline_info_24"
+                    android:tint="@color/black" />
+            </LinearLayout>
+            <Button
+                android:onClick="goLinkPage"
+                android:id="@+id/link_button"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_alignParentBottom="true"
+                android:background="@color/red_main_theme"
+                android:text="LINK"
+                android:layout_margin="8dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

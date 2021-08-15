@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp"
+   >
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/SubTitleTextView"
+        android:id="@+id/img_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_addcomment_24"
+        android:drawablePadding="8dp"
+        android:paddingTop="0dp"
+        android:drawableTint="@color/red_main_theme"
+        android:text="Edit"
+        android:textAllCaps="true"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <View
+        android:id="@+id/top_view"
+        style="@style/Divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_edit"/>
+    <EditText
+        android:id="@+id/add_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Send your comments"
+        android:layout_marginTop="32dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_view" />
+    <View
+        android:id="@+id/bottom_view"
+        style="@style/Divider"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_comment"/>
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:textAllCaps="false"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/bottom_view"
+        app:layout_constraintEnd_toEndOf="@id/bottom_view"/>
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/OffWhite"
+        android:textColor="@color/title_text_color"
+        app:layout_constraintTop_toBottomOf="@id/bottom_view"
+        app:layout_constraintEnd_toStartOf="@id/btn_add"
+        android:text="Cancel"
+        android:textAllCaps="false"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

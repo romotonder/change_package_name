@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FilterationBottomShitFrag">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10sp">
+
+        <TextView
+            android:id="@+id/cancel_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="9sp"
+            android:text="@string/cancel"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/reset_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="9sp"
+            android:text="Reset"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/Red"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/search_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_below="@id/cancel_text_view"
+            android:background="@drawable/rectangle_border_shape"
+            android:hint="@string/search"
+            android:paddingStart="10sp"
+            android:textSize="14sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/filter_list_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/search_edit_text" />
+    </RelativeLayout>
+</FrameLayout>

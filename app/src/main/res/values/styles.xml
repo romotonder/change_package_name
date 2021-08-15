@@ -1,0 +1,200 @@
+<resources>
+
+  <!--<style name="myTheme" parent="Theme.AppCompat.Light.NoActionBar">
+      <item name="colorPrimary">@color/colorPrimary</item>
+      <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+      <item name="colorAccent">@color/colorAccent</item>
+      <item name="android:textSize">16sp</item>
+  </style>-->
+
+  <!--<style name="neTheme" parent="myTheme">
+
+  </style>-->
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="android:textSize">16sp</item>
+
+  </style>
+
+
+  <style name="Fullscreen" parent="AppTheme">
+    <item name="windowNoTitle">true</item>
+    <item name="android:windowFullscreen">true</item>
+  </style>
+
+  <style name="DialogFragmentTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="android:paddingRight">0dp</item>
+    <item name="android:paddingLeft">0dp</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:windowNoTitle">true</item>
+  </style>
+
+  <style name="SubTitleEditTextView" parent="Widget.AppCompat.EditText">
+    <item name="android:textColor">@color/title_text_color</item>
+    <item name="android:textSize">16sp</item>
+    <item name="android:fontFamily">@font/roboto</item>
+    <item name="android:paddingTop">8dp</item>
+    <item name="android:paddingBottom">8dp</item>
+  </style>
+  <style name="SubTitleTextView" parent="Widget.AppCompat.TextView">
+    <item name="android:textColor">@color/title_text_color</item>
+    <item name="android:textSize">16sp</item>
+    <item name="android:fontFamily">@font/roboto</item>
+    <item name="android:paddingTop">8dp</item>
+    <item name="android:paddingBottom">8dp</item>
+  </style>
+  <style name="PrimaryButton" parent="android:Widget.Material.Button">
+    <item name="android:layout_marginStart">32dp</item>
+    <item name="android:layout_marginEnd">32dp</item>
+    <item name="android:layout_marginTop">16dp</item>
+    <item name="android:layout_marginBottom">16dp</item>
+    <item name="android:padding">16dp</item>
+    <item name="android:background">@drawable/shape_circle_login_button</item>
+  </style>
+  <style name="SecondaryButton" parent="Widget.MaterialComponents.Button">
+    <item name="android:layout_marginStart">32dp</item>
+    <item name="android:layout_marginEnd">32dp</item>
+    <item name="android:layout_marginTop">16dp</item>
+    <item name="android:layout_marginBottom">16dp</item>
+    <item name="android:padding">16dp</item>
+  </style>
+  <style name="BottomTextView" parent="TextAppearance.AppCompat.Body1">
+    <item name="android:textColor">@color/title_text_color</item>
+    <item name="android:textSize">12sp</item>
+    <item name="android:fontFamily">@font/roboto</item>
+  </style>
+  <style name="CardTextTitle" parent="Widget.AppCompat.TextView">
+    <item name="android:textColor">@color/title_text_color</item>
+    <item name="android:textSize">12sp</item>
+    <item name="android:fontFamily">@font/ubuntu</item>
+    <item name="android:paddingTop">1dp</item>
+    <item name="android:paddingBottom">1dp</item>
+    <item name="android:layout_marginStart">4dp</item>
+    <item name="android:layout_marginEnd">4dp</item>
+    <item name="android:textStyle">bold</item>
+  </style>
+  <style name="CardTextSubtitle" parent="Widget.AppCompat.TextView">
+    <item name="android:textColor">@color/subtitle_text_color</item>
+    <item name="android:textSize">12sp</item>
+    <item name="android:fontFamily">@font/roboto</item>
+    <item name="android:paddingTop">1dp</item>
+    <item name="android:paddingBottom">1dp</item>
+    <item name="android:layout_marginStart">4dp</item>
+    <item name="android:layout_marginEnd">4dp</item>
+    <item name="android:textStyle">normal</item>
+  </style>
+  <style name="HomeTitle" parent="Widget.AppCompat.TextView">
+    <item name="android:textColor">@color/title_text_color</item>
+    <item name="android:textSize">20sp</item>
+    <item name="android:paddingTop">4dp</item>
+    <item name="android:paddingBottom">2dp</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:ellipsize">end</item>
+    <item name="android:fontFamily">@font/roboto</item>
+  </style>
+  <style name="HomeSubTitle" parent="Widget.AppCompat.TextView">
+    <item name="android:textColor">@color/subtitle_text_color</item>
+    <item name="android:textSize">13sp</item>
+    <item name="android:paddingTop">2dp</item>
+    <item name="android:paddingBottom">4dp</item>
+    <item name="android:maxLines">2</item>
+    <item name="android:ellipsize">end</item>
+    <item name="android:fontFamily">@font/roboto</item>
+  </style>
+  <style name="LightPopupMenu" parent="ThemeOverlay.AppCompat.Light"/>
+
+  <style name="DetailsPageTitle" parent="Widget.AppCompat.TextView">
+    <item name="android:textColor">@color/title_text_color</item>
+    <item name="android:textSize">12sp</item>
+    <item name="android:paddingTop">8dp</item>
+    <item name="android:paddingBottom">8dp</item>
+    <item name="android:fontFamily">@font/roboto</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:gravity">center</item>
+  </style>
+  <style name="DetailsPageSubTitle" parent="Widget.AppCompat.TextView">
+    <item name="android:textColor">@color/subtitle_text_color</item>
+    <item name="android:textSize">12sp</item>
+    <item name="android:paddingTop">8dp</item>
+    <item name="android:paddingBottom">8dp</item>
+    <item name="android:fontFamily">@font/roboto</item>
+    <item name="textAllCaps">false</item>
+    <item name="android:gravity">center_vertical</item>
+  </style>
+  <style name="DetailsPageHeading" parent="Widget.AppCompat.TextView">
+    <item name="android:textColor">@color/title_text_color</item>
+    <item name="android:textSize">16sp</item>
+    <item name="android:paddingTop">8dp</item>
+    <item name="android:paddingBottom">8dp</item>
+    <!--<item name="android:fontFamily">@font/ubuntu</item>-->
+    <item name="android:fontFamily">@font/roboto</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:gravity">center</item>
+  </style>
+  <style name="DiscussionItemSubtitle" parent="Widget.AppCompat.TextView">
+    <item name="android:textColor">@color/subtitle_text_color</item>
+    <item name="android:textSize">12sp</item>
+    <!--<item name="android:fontFamily">@font/ubuntu</item>-->
+    <item name="android:fontFamily">@font/roboto</item>
+    <item name="android:paddingTop">2dp</item>
+    <item name="android:paddingBottom">2dp</item>
+    <!--<item name="android:textStyle">bold</item>-->
+    <item name="android:gravity">center_vertical</item>
+  </style>
+  <style name="Divider">
+    <item name="android:background">@color/LightGrey</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">1dp</item>
+  </style>
+  <style name="NotificationTitleTextView" parent="Widget.AppCompat.TextView">
+    <item name="android:textColor">@color/title_text_color</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:fontFamily">@font/roboto</item>
+    <item name="android:paddingTop">8dp</item>
+    <item name="android:paddingBottom">8dp</item>
+  </style>
+  <style name="NotificationSubTitleTextView" parent="Widget.AppCompat.TextView">
+    <item name="android:textColor">@color/title_text_color</item>
+    <item name="android:textSize">12sp</item>
+    <item name="android:fontFamily">@font/roboto</item>
+    <item name="android:paddingTop">8dp</item>
+    <item name="android:paddingBottom">8dp</item>
+  </style>
+
+  <style name="AccountPageTitle" parent="Widget.AppCompat.TextView">
+    <item name="android:textColor">@color/title_text_color</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:fontFamily">@font/roboto</item>
+    <item name="android:paddingTop">8dp</item>
+    <item name="android:paddingBottom">8dp</item>
+    <item name="android:textStyle">bold</item>
+
+  </style>
+  <style name="AccountPageSubTitle" parent="Widget.AppCompat.TextView">
+  <item name="android:textColor">@color/subtitle_text_color</item>
+  <item name="android:textSize">14sp</item>
+  <item name="android:fontFamily">@font/roboto</item>
+  <item name="android:paddingTop">4dp</item>
+  <item name="android:paddingBottom">4dp</item>
+  <item name="android:textStyle">normal</item>
+  </style>
+
+  <style name="ChatText" parent="Widget.AppCompat.TextView">
+    <item name="android:textColor">@color/title_text_color</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:fontFamily">@font/roboto</item>
+    <item name="android:padding">8dp</item>
+    <item name="android:layout_margin">4dp</item>
+    <item name="android:textStyle">normal</item>
+    <item name="android:background">@drawable/round_edit_textbox</item>
+  </style>
+
+</resources>

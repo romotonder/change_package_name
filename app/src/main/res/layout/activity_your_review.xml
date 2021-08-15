@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.YourReviewActivity">
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/DetailsPageHeading"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/app_background"
+        android:text="Your Review"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--general-->
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/general"
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="5"
+        android:progress="2"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGeneral" />
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/DetailsPageTitle"
+        android:id="@+id/tvGeneral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="General"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/DetailsPageTitle"
+        android:id="@+id/tvGeneralProgress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+    <!--service-->
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/service"
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="5"
+        android:progress="2"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvService" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvService"
+        style="@style/DetailsPageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Service"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/general" />
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/DetailsPageTitle"
+        android:id="@+id/tvServiceProgress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/general" />
+    <!--Quality-->
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/quality"
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="5"
+        android:progress="2"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuality" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvQuality"
+        style="@style/DetailsPageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Quality"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/service" />
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/DetailsPageTitle"
+        android:id="@+id/tvQualityProgress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/service" />
+    <!--Location-->
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/location"
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="5"
+        android:progress="2"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLocation" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLocation"
+        style="@style/DetailsPageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quality" />
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/DetailsPageTitle"
+        android:id="@+id/tvLocationProgress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quality" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/reviewTitleParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/review_title"
+        android:layout_margin="16dp"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtReviewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtReviewParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/your_review"
+        android:layout_margin="16dp"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reviewTitleParent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtReview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnSubmit"
+        style="@style/DetailsPageHeading"
+        android:onClick="sendYourReview"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:text="@string/submit"
+        android:textColor="@color/White"
+        android:gravity="center"
+        android:background="@color/btn_secondary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

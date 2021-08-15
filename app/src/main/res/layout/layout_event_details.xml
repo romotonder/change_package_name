@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/app_background"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.EventDetailsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/im_coverimage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/app_placeholder"
+                app:layout_collapseMode="parallax" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/LightPopupMenu"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/back"
+                        android:onClick="backPageReturn"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:padding="4dp"
+                        android:tint="@color/White"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_back_arrow_24" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_postTitle"
+                            style="@style/SubTitleTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/ubuntu"
+                            android:gravity="center"
+                            android:textColor="@color/White"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:onClick="menuOption"
+                            android:id="@+id/menu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="3"
+                            android:gravity="center"
+                            android:tint="@color/White"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_more" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/root_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <!--title card-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="2dp"
+                android:layout_margin="8dp"
+                app:layout_constraintEnd_toEndOf="@id/root_layout"
+                app:layout_constraintStart_toStartOf="@id/root_layout"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/child_heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_postTitle"
+                        style="@style/DetailsPageHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Heading Section"
+                        android:paddingBottom="0dp"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="@id/child_heading"
+                        app:layout_constraintTop_toTopOf="@id/child_heading" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_tagLine"
+                        style="@style/DetailsPageSubTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tag line"
+                        app:layout_constraintStart_toStartOf="@id/child_heading"
+                        app:layout_constraintTop_toBottomOf="@id/tv_postTitle" />
+
+                    <ImageView
+                        android:id="@+id/img_favorite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/ic_outline_favorite_border_24"
+                        app:layout_constraintEnd_toEndOf="@id/child_heading"
+                        app:layout_constraintTop_toTopOf="@id/child_heading" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--event section-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_eventDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:elevation="2dp"
+                app:layout_constraintStart_toStartOf="@id/root_layout"
+                app:layout_constraintTop_toBottomOf="@id/card_heading">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/child_schedule_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/imgEvent"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/shape_circle_background_lightgray"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_event_black_24dp"
+                        android:tint="@color/subtitle_text_color"
+                        app:layout_constraintStart_toStartOf="@id/child_schedule_layout"
+                        app:layout_constraintTop_toTopOf="@id/child_schedule_layout" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_eventDetails"
+                        style="@style/DetailsPageSubTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Event Schedule SectionEvent Schedule \nSection"
+                        app:layout_constraintStart_toEndOf="@id/imgEvent"
+                        app:layout_constraintTop_toTopOf="@id/child_schedule_layout" />
+
+                    <!--<androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_eventEnd"
+                        style="@style/DetailsPageSubTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Tag line"
+                        app:layout_constraintStart_toEndOf="@id/imgEvent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_eventstart" />-->
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_open"
+                        style="@style/DetailsPageSubTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/shape_rectangle_background_lightgray"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Opening at\n11:00"
+                        app:layout_constraintStart_toEndOf="@id/imgEvent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_eventDetails" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_close"
+                        style="@style/DetailsPageSubTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/shape_rectangle_background_lightgray"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Closed at\n11:00"
+                        app:layout_constraintStart_toEndOf="@id/tv_open"
+
+                        app:layout_constraintTop_toBottomOf="@+id/tv_eventDetails" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_eventAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:elevation="2dp"
+                app:layout_constraintStart_toStartOf="@id/root_layout"
+                app:layout_constraintTop_toBottomOf="@id/card_eventDetails">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/child_address_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_avrg_rating_title"
+                        style="@style/DetailsPageSubTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                        android:drawablePadding="8dp"
+                        android:text="123, Address , Denmark"
+                        app:drawableTint="@color/MediumSeaGreen"
+                        app:layout_constraintStart_toStartOf="@id/child_address_layout"
+                        app:layout_constraintTop_toTopOf="@id/child_address_layout" />
+                    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/event_map"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="120sp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginBottom="24dp"
+                        app:layout_constraintStart_toStartOf="@id/child_address_layout"
+                        app:layout_constraintTop_toBottomOf="@id/tv_avrg_rating_title"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_phone"
+                        android:onClick="phoneCall"
+                        style="@style/DetailsPageSubTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_phone_24"
+                        android:drawablePadding="8dp"
+                        android:text="7000123456"
+                        app:layout_constraintStart_toStartOf="@id/child_address_layout"
+                        app:layout_constraintTop_toBottomOf="@+id/event_map"
+                        tools:ignore="OnClick" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_emails"
+                        android:onClick="sendMail"
+                        style="@style/DetailsPageSubTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_outline_email_24"
+                        android:drawablePadding="8dp"
+                        android:text="svk.mondal"
+                        app:drawableTint="@color/red_main_theme"
+                        app:layout_constraintStart_toStartOf="@id/child_address_layout"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_phone" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_ingeneral"
+                        android:onClick="websiteView"
+                        style="@style/DetailsPageSubTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_insert_link_24"
+                        android:drawablePadding="8dp"
+                        android:text="svk.mondal"
+                        android:textColor="@color/blue"
+                        app:layout_constraintStart_toStartOf="@id/child_address_layout"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_emails" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <!--terminfo section-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_terminfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:elevation="2dp"
+                app:layout_constraintStart_toStartOf="@id/root_layout"
+                app:layout_constraintTop_toBottomOf="@id/card_eventAdd">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/child_category_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/cat_title"
+                        style="@style/DetailsPageTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_bookmark_border_24"
+                        android:drawablePadding="8dp"
+                        android:text="Category"
+                        app:drawableTint="@color/red_main_theme"
+                        app:layout_constraintStart_toStartOf="@+id/child_category_layout"
+                        app:layout_constraintTop_toTopOf="@+id/child_category_layout" />
+
+                    <View
+                        android:id="@+id/cat_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/Gray"
+                        app:layout_constraintEnd_toEndOf="@id/child_category_layout"
+                        app:layout_constraintStart_toStartOf="@id/child_category_layout"
+                        app:layout_constraintTop_toBottomOf="@id/cat_title" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/parent_terminfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@+id/child_category_layout"
+                        app:layout_constraintTop_toBottomOf="@id/cat_view" />
+
+                    <!--<LinearLayout
+                        android:id="@+id/parent_terminfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toStartOf="@+id/child_category_layout"
+                        app:layout_constraintTop_toBottomOf="@id/cat_view" />-->
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:elevation="2dp"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@id/root_layout"
+                app:layout_constraintTop_toBottomOf="@id/card_terminfo">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/child_description_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/descrip_title"
+                        style="@style/DetailsPageTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_file_24"
+                        android:drawablePadding="8dp"
+                        android:gravity="left"
+                        android:text="Description"
+                        app:drawableTint="@color/red_main_theme"
+                        app:layout_constraintStart_toStartOf="@+id/child_description_layout"
+                        app:layout_constraintTop_toTopOf="@+id/child_description_layout" />
+
+                    <View
+                        android:id="@+id/des_view"
+                        style="@style/Divider"
+                        app:layout_constraintStart_toStartOf="@id/child_description_layout"
+                        app:layout_constraintTop_toBottomOf="@id/descrip_title" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/description_body"
+                        style="@style/DetailsPageSubTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:padding="8dp"
+                        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                        app:layout_constraintStart_toStartOf="@+id/child_description_layout"
+                        app:layout_constraintTop_toBottomOf="@+id/des_view" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_discussion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:elevation="2dp"
+                app:layout_constraintStart_toStartOf="@id/root_layout"
+                app:layout_constraintTop_toBottomOf="@id/card_description">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/child_discussion_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/discussion_body"
+                        style="@style/DetailsPageSubTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="This color should be gray and lots of things "
+                        app:layout_constraintStart_toStartOf="@+id/child_discussion_layout"
+                        app:layout_constraintTop_toTopOf="@+id/child_discussion_layout" />
+
+                    <Button
+                        android:id="@+id/discussion_btn"
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Discussion"
+                        android:textAllCaps="false"
+                        app:layout_constraintTop_toBottomOf="@+id/discussion_body"
+                        tools:layout_editor_absoluteX="0dp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclelist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:layout_constraintStart_toStartOf="@id/root_layout"
+                app:layout_constraintTop_toBottomOf="@id/card_discussion" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

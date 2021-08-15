@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+    <ImageView
+        android:id="@+id/gallary_img"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:src="@drawable/app_placeholder"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        />
+    <ImageView
+        android:id="@+id/last_img"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:src="@drawable/app_placeholder"
+        android:scaleType="fitCenter"
+        android:tint="@color/ImgTint"
+        android:visibility="gone"
+        />
+    <TextView
+        style="@style/DetailsPageTitle"
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+100"
+        android:textSize="24sp"
+        android:layout_gravity="center"
+        android:textColor="@color/White"
+        android:visibility="gone"/>
+
+</FrameLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--login page-->
+  <dimen name="logintitle0">24sp</dimen>
+  <dimen name="logintitle1">25sp</dimen>
+  <dimen name="logintitle2">26sp</dimen>
+  <dimen name="loginbody0">16sp</dimen>
+  <dimen name="loginbody1">17sp</dimen>
+  <dimen name="loginbody2">18sp</dimen>
+  <dimen name="loginedittxt0">16sp</dimen>
+  <dimen name="loginedittxt1">17sp</dimen>
+  <dimen name="loginedittxt2">18sp</dimen>
+  <dimen name="loginbutton0">16sp</dimen>
+  <dimen name="loginbutton1">17sp</dimen>
+  <dimen name="loginbutton2">18sp</dimen>
+  <dimen name="loginrgistration0">14sp</dimen>
+  <dimen name="loginrgistration1">15sp</dimen>
+  <dimen name="loginrgistration2">16sp</dimen>
+
+</resources>

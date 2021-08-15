@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/item_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="4dp">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtHeadingTitle"
+        style="@style/HomeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What are you looking for?What are you looking for?"
+        android:textStyle="bold">
+
+    </androidx.appcompat.widget.AppCompatTextView>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtHeadingDiscription"
+        style="@style/HomeSubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="What are you looking for?What are you looking for?What are you looking for?What are you looking for?What are you looking for?What are you looking for?What are you looking for?What are you looking for?"
+        android:textStyle="normal">
+    </androidx.appcompat.widget.AppCompatTextView>
+
+</LinearLayout>

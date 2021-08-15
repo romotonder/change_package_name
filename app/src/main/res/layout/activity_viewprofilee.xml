@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".activities.ViewProfile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/root_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/coverImg"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:scaleType="centerCrop"
+
+                android:src="@drawable/app_placeholder"
+                android:tint="@color/ImgTint"
+                app:layout_constraintStart_toStartOf="@id/root_layout"
+                app:layout_constraintTop_toTopOf="@id/root_layout" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:onClick="editProfile"
+                android:id="@+id/editProfile"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_outline_edit_24"
+                android:tint="@color/White"
+                app:layout_constraintEnd_toEndOf="@id/coverImg"
+                app:layout_constraintTop_toTopOf="@id/coverImg" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/displayImg"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="16dp"
+                android:background="@color/red_main_theme"
+                android:scaleType="centerCrop"
+                android:src="@drawable/app_placeholder"
+                app:layout_constraintBottom_toBottomOf="@id/coverImg"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/display_name"
+                style="@style/AccountPageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="Profile"
+                android:textColor="@color/White"
+                app:layout_constraintBottom_toBottomOf="@id/displayImg"
+                app:layout_constraintStart_toEndOf="@+id/displayImg"
+                app:layout_constraintTop_toTopOf="@id/displayImg" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:elevation="4dp"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintStart_toStartOf="@id/root_layout"
+                app:layout_constraintTop_toBottomOf="@id/coverImg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/AccountPageTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_outline_info_24"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="@color/red_main_theme"
+                        android:gravity="left|center"
+                        android:paddingEnd="8dp"
+                        android:text="@string/basic_info"
+                        android:textSize="12sp"/>
+
+                    <View style="@style/Divider" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/emails"
+                        style="@style/AccountPageSubTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:padding="8dp"
+
+                        android:text="@string/email_id" />
+
+                    <View style="@style/Divider" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/language"
+                        style="@style/AccountPageSubTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:padding="8dp"
+                        android:text="@string/language" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:elevation="4dp"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintStart_toStartOf="@id/root_layout"
+                app:layout_constraintTop_toBottomOf="@id/cardProfile">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/AccountPageTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_follow_and_contact_24"
+                        android:drawableTint="@color/red_main_theme"
+                        android:drawablePadding="8dp"
+                        android:gravity="left|center"
+                        android:paddingEnd="8dp"
+                        android:textSize="12sp"
+                        android:text="@string/follow_and_contact" />
+
+                    <View style="@style/Divider" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/address"
+                        style="@style/AccountPageSubTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:padding="8dp"
+                        android:text="Address"/>
+
+                    <View style="@style/Divider" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/phone"
+                        style="@style/AccountPageSubTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:padding="8dp"
+                        android:text="Phone"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:elevation="4dp"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintStart_toStartOf="@id/root_layout"
+                app:layout_constraintTop_toBottomOf="@id/cardInfo">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/titleArea"
+                        style="@style/AccountPageTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_outline_info_24"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="@color/red_main_theme"
+                        android:gravity="left|center"
+                        android:paddingEnd="8dp"
+                        android:text="@string/Area_of_Interest"
+                        android:textSize="12sp"
+                        android:background="@color/White"
+                        />
+                    <View style="@style/Divider" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/preferenceArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "415158262655",
+    "firebase_url": "https://romo-tonder-1563873199277.firebaseio.com",
+    "project_id": "romo-tonder-1563873199277",
+    "storage_bucket": "romo-tonder-1563873199277.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415158262655:android:d1f56d9a348c5af9b4d84a",
+        "android_client_info": {
+          "package_name": "com.romo.tonder.visits"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415158262655-m6gn32vk631iigm0shlf7pug6nc7srum.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.romo.tonder.visits",
+            "certificate_hash": "7a99dab4ae5183dab02255031386b8aa244217ea"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXQcyGb3W31malhHTXHq4h8VEVpN_YdVA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415158262655-0aaf1snqp66pne6q25k4n6vnqmlr8rr5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.romotonder"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
